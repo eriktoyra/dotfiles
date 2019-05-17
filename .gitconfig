@@ -1,0 +1,32 @@
+[user]
+  name = Erik Töyrä Silfverswärd
+  email = erik.toyra@gmail.com
+
+[credential]
+  helper = osxkeychain
+
+[core]
+  editor = code --wait
+
+[alias]
+  healthy   = remote -v update
+  no-merged = branch -r --no-merge
+  peek      = show --stat
+  pod       = pull origin develop
+  pom       = pull origin master
+  tree      = log --pretty=oneline --graph --decorate --all
+
+[diff]
+  tool = default-difftool
+
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
+[includeIf "gitdir:~/Projects/Consid/"]
+  path = ~/Projects/Consid/.gitconfig
+
+[includeIf "gitdir:~/Projects/Collector/"]
+  path = ~/Projects/Collector/.gitconfig
+
+[includeIf "gitdir:~/Projects/Private/"]
+  path = ~/Projects/Private/.gitconfig
