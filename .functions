@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Ports and processes
+#--------------------------
+function whos-blocking() {
+  sudo lsof -nP -i4TCP:"$1" | grep LISTEN
+}
