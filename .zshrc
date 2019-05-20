@@ -109,7 +109,6 @@ export PATH="/usr/local/opt/node@8/bin:$PATH"
 #--------------------------
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-pwd
 source ./.aliases
 source ./.functions
 
