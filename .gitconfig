@@ -12,10 +12,12 @@
 [alias]
   healthy   = remote -v update
   no-merged = branch -r --no-merge
+  unstage   = reset HEAD --
+  publish   = push -u origin HEAD
   peek      = show --stat
-  pod       = pull origin develop
-  pom       = pull origin master
-  tree      = log --pretty=oneline --graph --decorate --all
+  tree      = log --oneline --graph --decorate --all
+  last      = log -1 HEAD
+  search    = !git log --pretty=medium --grep
 
 [diff]
   tool = default-difftool
