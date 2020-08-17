@@ -25,11 +25,17 @@
 [difftool "default-difftool"]
   cmd = code --wait --diff $LOCAL $REMOTE
 
+[includeIf "gitdir:~/Projects/AstraZeneca/"]
+  path = ~/Projects/Consid/.gitconfig  
+
 [includeIf "gitdir:~/Projects/Consid/"]
   path = ~/Projects/Consid/.gitconfig
 
 [includeIf "gitdir:~/Projects/Collector/"]
   path = ~/Projects/Collector/.gitconfig
+
+[includeIf "gitdir:~/Projects/Colligent/"]
+  path = ~/Projects/Colligent/.gitconfig
 
 [includeIf "gitdir:~/Projects/Private/"]
   path = ~/Projects/Private/.gitconfig
