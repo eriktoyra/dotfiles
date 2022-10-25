@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# python
+alias python='python3'
+
 # npm
 alias npm-am='npm audit | grep Moderate -B1 -A10'
 alias npm-ah='npm audit | grep High -B1 -A10'

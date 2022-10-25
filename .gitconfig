@@ -18,6 +18,7 @@
   tree      = log --oneline --graph --decorate --all
   last      = log -1 HEAD
   search    = !git log --pretty=medium --grep
+  findb     = "!f(){ git branch $2 | grep $1; }; f"
 
 [diff]
   tool = default-difftool
@@ -26,7 +27,7 @@
   cmd = code --wait --diff $LOCAL $REMOTE
 
 [includeIf "gitdir:~/Projects/AstraZeneca/"]
-  path = ~/Projects/Consid/.gitconfig  
+  path = ~/Projects/AstraZeneca/.gitconfig  
 
 [includeIf "gitdir:~/Projects/Consid/"]
   path = ~/Projects/Consid/.gitconfig
