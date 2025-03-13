@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+WHITE_BOLD='\033[1;37m'
+NC='\033[0m' 
+
 # Ports and processes
 #--------------------------
 function whos-blocking() {

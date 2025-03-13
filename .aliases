@@ -3,7 +3,8 @@
 # python
 alias python='python3'
 
-# npm
-alias npm-am='npm audit | grep Moderate -B1 -A10'
-alias npm-ah='npm audit | grep High -B1 -A10'
-alias npm-ac='npm audit | grep Critical -B1 -A10'
+# cli
+alias clearall="clear && printf '\e[3J'"
+
+# helm
+alias helm3=helm

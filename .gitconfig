@@ -18,7 +18,8 @@
   tree      = log --oneline --graph --decorate --all
   last      = log -1 HEAD
   search    = !git log --pretty=medium --grep
-  findb     = "!f(){ git branch $2 | grep $1; }; f"
+  findb      = "!f(){ git branch $2 | grep $1; }; f"
+  pristine  = "!f(){ current_branch=$(git branch --show-current) && git switch develop && git branch -D $current_branch && git pull; }; f"
 
 [diff]
   tool = default-difftool

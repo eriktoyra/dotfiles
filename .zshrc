@@ -115,3 +115,14 @@ source ~/.functions
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.gem/ruby/3.1.0/bin:$PATH"
+eval "$(rbenv init -)"
+
+# Plugins
+plugins=(git aws brew bun colorize gh nvm rsync ssh sudo tldr vscode z)
+
+# kubectl
+alias k="kubectl"
