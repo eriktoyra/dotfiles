@@ -65,7 +65,18 @@ ZSH_THEME="eriktoyra-af-magic"
 plugins=(
   git
   zsh-autosuggestions
+  aws 
+  brew
+  bun
+  colorize
+  gh
+  ssh
+  sudo
+  vscode
 )
+
+# zsh-completions
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,15 +110,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 #--------------------------
 # My custom configurations
 #--------------------------
-
-# Autojump
-#--------------------------
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 source ~/.aliases
 source ~/.functions
@@ -126,3 +132,8 @@ plugins=(git aws brew bun colorize gh nvm rsync ssh sudo tldr vscode z)
 
 # kubectl
 alias k="kubectl"
+
+# Enable Zoxide
+if command -v zoxide &> /dev/null; then
+    eval "$(zoxide init zsh)"
+fi
